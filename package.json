@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-mdast",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Convert markdown to html with mdast",
   "license": "MIT",
   "homepage": "https://github.com/ben-eb/metalsmith-mdast",
