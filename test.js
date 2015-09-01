@@ -5,12 +5,12 @@ var test       = require('tape'),
     mdast      = require('./'),
     rmBadges   = require('mdast-strip-badges'),
     rmParas    = require('mdast-squeeze-paragraphs'),
-    Metalsmith = require('metalsmith');
+    metalsmith = require('metalsmith');
 
-test('should convert svg files', function (t) {
+test('should convert markdown files', function (t) {
     t.plan(2);
 
-    Metalsmith('fixtures')
+    metalsmith('fixtures')
         .use(mdast([ rmBadges, rmParas ]))
         .build(function (err) {
             t.notOk(err, 'should not error');

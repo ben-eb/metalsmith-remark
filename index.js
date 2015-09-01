@@ -5,7 +5,7 @@ var mdast = require('mdast'),
     extname = require('path').extname;
 
 function plugin (plugins) {
-    return function (files, metalsmith) {
+    return function (files) {
         Object.keys(files).map(function (file) {
             var extension = extname(file);
             if (extension !== '.md' && extension !== '.markdown') {
@@ -18,7 +18,7 @@ function plugin (plugins) {
             delete files[file];
             files[file.replace(extension, '.html')] = data;
         });
-    }
+    };
 }
 
 /**
