@@ -1,28 +1,30 @@
-# [metalsmith][metalsmith]-mdast [![Build Status](https://travis-ci.org/ben-eb/metalsmith-mdast.svg?branch=master)][ci] [![NPM version](https://badge.fury.io/js/metalsmith-mdast.svg)][npm] [![Dependency Status](https://gemnasium.com/ben-eb/metalsmith-mdast.svg)][deps]
+# [metalsmith][metalsmith]-remark [![Build Status](https://travis-ci.org/ben-eb/metalsmith-remark.svg?branch=master)][ci] [![NPM version](https://badge.fury.io/js/metalsmith-remark.svg)][npm] [![Dependency Status](https://gemnasium.com/ben-eb/metalsmith-remark.svg)][deps]
 
-> Convert markdown to html with mdast.
+> Convert markdown to html with remark.
 
 *If you have any issues with the output of this plugin, please use the
-[mdast tracker](https://github.com/wooorm/mdast/issues).*
+[remark tracker](https://github.com/wooorm/remark/issues).*
+
 
 ## Install
 
-With [npm](https://npmjs.org/package/metalsmith-mdast) do:
+With [npm](https://npmjs.org/package/metalsmith-remark) do:
 
 ```
-npm install metalsmith-mdast --save
+npm install metalsmith-remark --save
 ```
+
 
 ## Example
 
-The [mdast-html][mdasthtml] plugin is bundled for you automatically:
+The [remark-html] plugin is bundled for you automatically:
 
 ```js
-var mdast      = require('metalsmith-mdast'),
+var remark     = require('metalsmith-remark'),
     Metalsmith = require('metalsmith');
 
 Metalsmith('fixtures')
-    .use(mdast())
+    .use(remark())
     .build(function (err) {
         if (err) {
             throw err;
@@ -33,11 +35,11 @@ Metalsmith('fixtures')
 Add further plugins by passing an array:
 
 ```js
-var rmBadges   = require('mdast-strip-badges'),
-    rmParas    = require('mdast-squeeze-paragraphs');
+var rmBadges   = require('remark-strip-badges'),
+    rmParas    = require('remark-squeeze-paragraphs');
 
 Metalsmith('fixtures')
-    .use(mdast([ rmBadges, rmParas ]))
+    .use(remark([ rmBadges, rmParas ]))
     .build(function (err) {
         if (err) {
             throw err;
@@ -45,17 +47,20 @@ Metalsmith('fixtures')
     });
 ```
 
+
 ## Contributing
 
 Pull requests are welcome. If you add functionality, then please add unit
 tests to cover it.
 
+
 ## License
 
 MIT © [Ben Briggs](http://beneb.info)
 
-[ci]:         https://travis-ci.org/ben-eb/metalsmith-mdast
-[deps]:       https://gemnasium.com/ben-eb/metalsmith-mdast
-[mdasthtml]:  https://github.com/wooorm/mdast-html
-[metalsmith]: https://github.com/segmentio/metalsmith
-[npm]:        http://badge.fury.io/js/metalsmith-mdast
+
+[ci]:          https://travis-ci.org/ben-eb/metalsmith-remark
+[deps]:        https://gemnasium.com/ben-eb/metalsmith-remark
+[remark-html]: https://github.com/wooorm/remark-html
+[metalsmith]:  https://github.com/segmentio/metalsmith
+[npm]:         http://badge.fury.io/js/metalsmith-remark

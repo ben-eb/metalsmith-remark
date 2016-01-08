@@ -1,21 +1,22 @@
 'use strict';
 
-var test       = require('tape'),
+var ava        = require('ava'),
     equal      = require('assert-dir-equal'),
-    mdast      = require('./'),
-    rmBadges   = require('mdast-strip-badges'),
-    rmParas    = require('mdast-squeeze-paragraphs'),
+    remark     = require('./'),
+    rmBadges   = require('remark-strip-badges'),
+    rmParas    = require('remark-squeeze-paragraphs'),
     metalsmith = require('metalsmith');
 
-test('should convert markdown files', function (t) {
-    t.plan(2);
-
-    metalsmith('fixtures')
-        .use(mdast([ rmBadges, rmParas ]))
-        .build(function (err) {
-            t.notOk(err, 'should not error');
-            t.doesNotThrow(function () {
-                equal('fixtures/build', 'fixtures/expected');
+ava('should convert markdown files', function (t) {
+    return new Promise(function (resolve) {
+        metalsmith('fixtures')
+            .use(remark([ rmBadges, rmParas ]))
+            .build(function (err) {
+                t.notOk(err, 'should not error');
+                t.doesNotThrow(function () {
+                    equal('fixtures/build', 'fixtures/expected');
+                });
+                resolve();
             });
-        });
+    });
 });

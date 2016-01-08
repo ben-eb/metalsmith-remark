@@ -1,7 +1,7 @@
 'use strict';
 
-var mdast = require('mdast'),
-    html = require('mdast-html'),
+var remark  = require('remark'),
+    html    = require('remark-html'),
     extname = require('path').extname;
 
 function plugin (plugins) {
@@ -12,7 +12,7 @@ function plugin (plugins) {
                 return true;
             }
             var markdown = String(files[file].contents);
-            var result = mdast.use(plugins).use(html).process(markdown);
+            var result = remark.use(plugins).use(html).process(markdown);
             files[file].contents = new Buffer(result);
             var data = files[file];
             delete files[file];

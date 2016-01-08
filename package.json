@@ -1,9 +1,9 @@
 {
-  "name": "metalsmith-mdast",
+  "name": "metalsmith-remark",
   "version": "1.0.0",
-  "description": "Convert markdown to html with mdast",
+  "description": "Convert markdown to html with remark",
   "license": "MIT",
-  "homepage": "https://github.com/ben-eb/metalsmith-mdast",
+  "homepage": "https://github.com/ben-eb/metalsmith-remark",
   "author": {
     "name": "Ben Briggs",
     "email": "beneb.info@gmail.com",
@@ -15,24 +15,24 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "mdast": "^1.1.0",
-    "mdast-html": "^1.0.0"
+    "remark": "^3.1.3",
+    "remark-html": "^2.0.2"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "mdast-squeeze-paragraphs": "^1.1.0",
-    "mdast-strip-badges": "^1.0.0",
-    "metalsmith": "^1.0.1",
-    "tap-spec": "^4.1.0",
-    "tape": "^4.2.0"
+    "ava": "^0.9.1",
+    "eslint": "^1.10.3",
+    "metalsmith": "^2.1.0",
+    "remark-squeeze-paragraphs": "^3.0.0",
+    "remark-strip-badges": "^2.0.0"
   },
   "keywords": [
     "markdown",
-    "mdast",
+    "remark",
     "metalsmith"
   ],
   "scripts": {
-    "test": "tape test.js | tap-spec"
+    "test": "ava test.js"
   },
-  "repository": "ben-eb/metalsmith-mdast"
+  "repository": "ben-eb/metalsmith-remark"
 }
