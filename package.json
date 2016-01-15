@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "ava": "^0.9.1",
+    "ava": "^0.10.0",
     "eslint": "^1.10.3",
     "metalsmith": "^2.1.0",
     "remark-squeeze-paragraphs": "^3.0.0",
