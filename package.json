@@ -24,7 +24,7 @@
     "eslint": "^1.10.3",
     "metalsmith": "^2.1.0",
     "remark-squeeze-paragraphs": "^3.0.0",
-    "remark-strip-badges": "^2.0.0"
+    "remark-strip-badges": "^3.0.0"
   },
   "keywords": [
     "markdown",
