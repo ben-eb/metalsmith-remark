@@ -15,13 +15,13 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "remark": "^4.0.0",
+    "remark": "^4.1.0",
     "remark-html": "^3.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
     "ava": "^0.11.0",
-    "eslint": "^2.0.0",
+    "eslint": "^2.1.0",
     "metalsmith": "^2.1.0",
     "remark-squeeze-paragraphs": "^3.0.0",
     "remark-strip-badges": "^3.0.0"
