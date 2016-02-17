@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-remark",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Convert markdown to html with remark",
   "license": "MIT",
   "homepage": "https://github.com/ben-eb/metalsmith-remark",
@@ -26,7 +26,6 @@
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
     "ava": "^0.11.0",
-    "ava": "^0.11.0",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",
     "babel-plugin-add-module-exports": "^0.1.2",
@@ -47,10 +46,10 @@
     "metalsmith"
   ],
   "eslintConfig": {
-    "extends": "cssnano"  
+    "extends": "cssnano"
   },
   "ava": {
-    "require": "babel-core/register"  
+    "require": "babel-core/register"
   },
   "repository": "ben-eb/metalsmith-remark"
 }
