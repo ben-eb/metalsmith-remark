@@ -9,30 +9,48 @@
     "email": "beneb.info@gmail.com",
     "url": "http://beneb.info"
   },
+  "main": "dist/index.js",
+  "scripts": {
+    "pretest": "eslint src",
+    "prepublish": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
+    "test": "ava src/__tests__"
+  },
   "files": [
     "LICENSE-MIT",
-    "index.js"
+    "dist"
   ],
-  "main": "index.js",
   "dependencies": {
-    "remark": "^3.1.3",
-    "remark-html": "^2.0.2"
+    "remark": "^4.1.0",
+    "remark-html": "^3.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
     "ava": "^0.11.0",
-    "eslint": "^1.10.3",
+    "ava": "^0.11.0",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-es2015-loose": "^7.0.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "coveralls": "^2.11.6",
+    "del-cli": "^0.2.0",
+    "eslint": "^2.1.0",
+    "eslint-config-cssnano": "^2.0.0",
     "metalsmith": "^2.1.0",
     "remark-squeeze-paragraphs": "^3.0.0",
-    "remark-strip-badges": "^2.0.0"
+    "remark-strip-badges": "^3.0.0"
   },
   "keywords": [
     "markdown",
     "remark",
     "metalsmith"
   ],
-  "scripts": {
-    "test": "ava test.js"
+  "eslintConfig": {
+    "extends": "cssnano"  
+  },
+  "ava": {
+    "require": "babel-core/register"  
   },
   "repository": "ben-eb/metalsmith-remark"
 }
