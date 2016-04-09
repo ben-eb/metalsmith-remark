@@ -10,7 +10,7 @@ ava('should convert markdown files', t => {
         metalsmith('fixtures')
             .use(remark([ rmBadges, rmParas ]))
             .build(err => {
-                t.notOk(err, 'should not error');
+                t.falsy(err, 'should not error');
                 t.doesNotThrow(() => {
                     equal('fixtures/build', 'fixtures/expected');
                 });
