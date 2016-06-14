@@ -11,9 +11,7 @@ ava('should convert markdown files', t => {
             .use(remark([ rmBadges, rmParas ]))
             .build(err => {
                 t.falsy(err, 'should not error');
-                t.doesNotThrow(() => {
-                    equal('fixtures/build', 'fixtures/expected');
-                });
+                t.notThrows(() => equal('fixtures/build', 'fixtures/expected'));
                 resolve();
             });
     });

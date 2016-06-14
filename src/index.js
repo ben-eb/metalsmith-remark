@@ -10,8 +10,8 @@ export default function metalsmithRemark (plugins) {
                 return true;
             }
             const markdown = String(files[file].contents);
-            const result = remark.use(plugins).use(html).process(markdown);
-            files[file].contents = new Buffer(result);
+            const result = remark().use(plugins).use(html).process(markdown);
+            files[file].contents = new Buffer(result.contents);
             const data = files[file];
             delete files[file];
             files[file.replace(extension, '.html')] = data;

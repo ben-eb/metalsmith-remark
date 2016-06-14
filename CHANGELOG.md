@@ -1,3 +1,7 @@
+# 4.0.0
+
+* Upgraded to remark 5.x.
+
 # 3.0.0
 
 * Upgraded to remark 4.x.
