@@ -1,6 +1,6 @@
+import {extname} from 'path';
 import remark from 'remark';
 import html from 'remark-html';
-import {extname} from 'path';
 
 export default function metalsmithRemark (plugins) {
     return function (files) {

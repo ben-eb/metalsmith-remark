@@ -1,9 +1,9 @@
 import ava from 'ava';
 import equal from 'assert-dir-equal';
-import remark from '..';
 import rmBadges from 'remark-strip-badges';
 import rmParas from 'remark-squeeze-paragraphs';
 import metalsmith from 'metalsmith';
+import remark from '..';
 
 ava('should convert markdown files', t => {
     return new Promise(resolve => {
