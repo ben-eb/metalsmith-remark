@@ -1,3 +1,7 @@
+# 5.0.0
+
+* Upgraded to remark-html 5.x.
+
 # 4.0.0
 
 * Upgraded to remark 5.x.
