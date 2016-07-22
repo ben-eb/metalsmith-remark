@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-remark",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Convert markdown to html with remark",
   "license": "MIT",
   "homepage": "https://github.com/ben-eb/metalsmith-remark",
