@@ -20,7 +20,7 @@
     "dist"
   ],
   "dependencies": {
-    "remark": "^5.0.1",
+    "remark": "^6.0.0",
     "remark-html": "^5.0.0"
   },
   "devDependencies": {
