@@ -20,8 +20,8 @@
     "dist"
   ],
   "dependencies": {
-    "remark": "^5.0.1",
-    "remark-html": "^5.0.0"
+    "remark": "^8.0.0",
+    "remark-html": "^6.0.1"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
